@@ -1,0 +1,10 @@
+{
+  "name": "whetstone",
+  "version": "1.0.0",
+  "description": "Claude directs and reviews while GPT (Codex CLI) builds: contracts, research-first craft, evidence checks, corner-cutting detection and aesthetic direction for very long tasks.",
+  "author": { "name": "shoal-rat", "url": "https://github.com/shoal-rat" },
+  "homepage": "https://github.com/shoal-rat/whetstone",
+  "repository": "https://github.com/shoal-rat/whetstone",
+  "license": "MIT",
+  "keywords": ["codex", "gpt", "supervision", "long-horizon", "agents", "game-dev", "aesthetics", "review"]
+}

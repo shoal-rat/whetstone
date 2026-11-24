@@ -1,0 +1,14 @@
+{
+  "name": "whetstone",
+  "owner": { "name": "shoal-rat", "url": "https://github.com/shoal-rat" },
+  "description": "whetstone: Claude supervises GPT in Codex on very long tasks.",
+  "plugins": [
+    {
+      "name": "whetstone",
+      "source": "./",
+      "description": "Claude directs and reviews while GPT (Codex CLI) builds: contracts, research-first craft, evidence checks, corner-cutting detection and aesthetic direction for very long tasks.",
+      "version": "1.0.0",
+      "category": "development"
+    }
+  ]
+}

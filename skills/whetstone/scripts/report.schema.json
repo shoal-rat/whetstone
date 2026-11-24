@@ -1,0 +1,65 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["status", "summary", "acceptance", "artifacts", "sources", "shortfalls", "questions", "next"],
+  "properties": {
+    "status": {
+      "type": "string",
+      "enum": ["complete", "partial", "blocked"],
+      "description": "complete only when every acceptance item named in this brief passes with proof produced in this turn."
+    },
+    "summary": {
+      "type": "string",
+      "description": "Two or three plain sentences on what changed in this turn. Results, not plans."
+    },
+    "acceptance": {
+      "type": "array",
+      "description": "One entry per acceptance item named in the brief.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "status", "proof"],
+        "properties": {
+          "id": { "type": "string", "description": "The item id from the contract, e.g. A7." },
+          "status": { "type": "string", "enum": ["pass", "fail", "not_checked"] },
+          "proof": {
+            "type": "string",
+            "description": "How it was shown this turn: the exact command in backticks and its result, a test name, or a capture path. Empty when not_checked."
+          }
+        }
+      }
+    },
+    "artifacts": {
+      "type": "array",
+      "description": "Paths (relative to the workspace) of captures, builds, videos, logs or notes produced this turn.",
+      "items": { "type": "string" }
+    },
+    "sources": {
+      "type": "array",
+      "description": "Tutorials, manuals, talks or design documents actually opened this turn, with what was taken from each. Empty if none.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["url", "takeaway"],
+        "properties": {
+          "url": { "type": "string" },
+          "takeaway": { "type": "string", "description": "The concrete technique or number taken from it and where it was applied." }
+        }
+      }
+    },
+    "shortfalls": {
+      "type": "array",
+      "description": "Everything still short of the brief or the quality bar, stated plainly.",
+      "items": { "type": "string" }
+    },
+    "questions": {
+      "type": "array",
+      "description": "Only decisions you could not settle from the contract and brief.",
+      "items": { "type": "string" }
+    },
+    "next": {
+      "type": "string",
+      "description": "The most valuable next step if this turn were continued."
+    }
+  }
+}

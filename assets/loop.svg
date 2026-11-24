@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1360 600" width="1360" height="600" font-family="Georgia, 'Times New Roman', serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4a4a4a"/>
+    </marker>
+    <marker id="arrV" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#b8402c"/>
+    </marker>
+    <style>
+      .box { fill: #fffdf8; stroke: #d8ccb8; stroke-width: 1.5; }
+      .t { font-size: 17px; font-weight: bold; fill: #1f2328; }
+      .d { font-size: 12.5px; fill: #4b4f56; font-family: -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; }
+      .chip { font-size: 11px; font-weight: bold; fill: #fff; font-family: -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; letter-spacing: 0.5px; }
+      .lbl { font-size: 12.5px; fill: #8a3a2a; font-family: -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; font-style: italic; }
+      .tool { font-size: 12px; fill: #2b3a55; font-family: 'SF Mono', Menlo, Consolas, monospace; }
+      .num { font-size: 13px; font-weight: bold; fill: #9a8f80; }
+    </style>
+  </defs>
+
+  <rect width="1360" height="600" fill="#faf6ee"/>
+
+  <text x="40" y="52" font-size="28" font-weight="bold" fill="#1f2328">The whetstone loop</text>
+  <text x="40" y="80" font-size="15" fill="#5b5f66" font-style="italic">Claude holds the bar. GPT holds the keyboard.</text>
+
+  <!-- legend -->
+  <rect x="1010" y="36" width="64" height="20" rx="10" fill="#2b3a55"/>
+  <text x="1042" y="50" class="chip" text-anchor="middle">CLAUDE</text>
+  <text x="1082" y="51" class="d">directs, checks, judges</text>
+  <rect x="1010" y="64" width="64" height="20" rx="10" fill="#c8442f"/>
+  <text x="1042" y="78" class="chip" text-anchor="middle">GPT</text>
+  <text x="1082" y="79" class="d">builds in Codex</text>
+
+  <!-- tools row -->
+  <text x="765" y="112" class="tool" text-anchor="middle">gpt_turn.py digest</text>
+  <text x="765" y="128" class="tool" text-anchor="middle">lazy_scan.py</text>
+  <line x1="765" y1="134" x2="765" y2="152" stroke="#2b3a55" stroke-width="1.2" stroke-dasharray="3 3"/>
+  <text x="932" y="128" class="tool" text-anchor="middle">look.py sheets</text>
+  <line x1="932" y1="134" x2="932" y2="152" stroke="#2b3a55" stroke-width="1.2" stroke-dasharray="3 3"/>
+  <text x="18" y="128" class="tool">setup.py · CONTRACT.md · LEDGER.md</text>
+  <line x1="98" y1="134" x2="98" y2="152" stroke="#2b3a55" stroke-width="1.2" stroke-dasharray="3 3"/>
+
+  <!-- boxes: x = 22 + i*167, w = 150, y = 155, h = 170 -->
+  <!-- 1 Contract -->
+  <rect class="box" x="22" y="155" width="150" height="170" rx="10"/>
+  <rect x="34" y="167" width="60" height="18" rx="9" fill="#2b3a55"/><text x="64" y="180" class="chip" text-anchor="middle">CLAUDE</text>
+  <text x="160" y="181" class="num" text-anchor="end">1</text>
+  <text x="34" y="210" class="t">Contract</text>
+  <text class="d"><tspan x="34" y="232">Expand the one-line</tspan><tspan x="34" y="249">ask into acceptance</tspan><tspan x="34" y="266">items, a named quality</tspan><tspan x="34" y="283">bar and a scope lock</tspan><tspan x="34" y="300">GPT may not shrink.</tspan></text>
+
+  <!-- 2 Research -->
+  <rect class="box" x="189" y="155" width="150" height="170" rx="10"/>
+  <rect x="201" y="167" width="44" height="18" rx="9" fill="#c8442f"/><text x="223" y="180" class="chip" text-anchor="middle">GPT</text>
+  <text x="327" y="181" class="num" text-anchor="end">2</text>
+  <text x="201" y="210" class="t">Research first</text>
+  <text class="d"><tspan x="201" y="232">Live web search:</tspan><tspan x="201" y="249">manuals, GDC/CEDEC</tspan><tspan x="201" y="266">talks, art breakdowns.</tspan><tspan x="201" y="283">Techniques with</tspan><tspan x="201" y="300">numbers, cited.</tspan></text>
+
+  <!-- 3 Milestones -->
+  <rect class="box" x="356" y="155" width="150" height="170" rx="10"/>
+  <rect x="368" y="167" width="44" height="18" rx="9" fill="#c8442f"/><text x="390" y="180" class="chip" text-anchor="middle">GPT</text>
+  <rect x="416" y="167" width="60" height="18" rx="9" fill="#2b3a55"/><text x="446" y="180" class="chip" text-anchor="middle">CLAUDE</text>
+  <text x="494" y="181" class="num" text-anchor="end">3</text>
+  <text x="368" y="210" class="t">Milestones</text>
+  <text class="d"><tspan x="368" y="232">GPT drafts, Claude</tspan><tspan x="368" y="249">reorders by risk: core</tspan><tspan x="368" y="266">loop and art pipeline</tspan><tspan x="368" y="283">first. Each one ends</tspan><tspan x="368" y="300">in a demo.</tspan></text>
+
+  <!-- 4 Build -->
+  <rect class="box" x="523" y="155" width="150" height="170" rx="10" stroke="#c8442f" stroke-width="2"/>
+  <rect x="535" y="167" width="44" height="18" rx="9" fill="#c8442f"/><text x="557" y="180" class="chip" text-anchor="middle">GPT</text>
+  <text x="661" y="181" class="num" text-anchor="end">4</text>
+  <text x="535" y="210" class="t">Build turn</text>
+  <text class="d"><tspan x="535" y="232">One milestone per</tspan><tspan x="535" y="249">codex exec turn, kept</tspan><tspan x="535" y="266">going until it passes.</tspan><tspan x="535" y="283">Ends with a JSON</tspan><tspan x="535" y="300">report and proof.</tspan></text>
+
+  <!-- 5 Verify -->
+  <rect class="box" x="690" y="155" width="150" height="170" rx="10" stroke="#2b3a55" stroke-width="2"/>
+  <rect x="702" y="167" width="60" height="18" rx="9" fill="#2b3a55"/><text x="732" y="180" class="chip" text-anchor="middle">CLAUDE</text>
+  <text x="828" y="181" class="num" text-anchor="end">5</text>
+  <text x="702" y="210" class="t">Verify</text>
+  <text class="d"><tspan x="702" y="232">The report is a claim.</tspan><tspan x="702" y="249">Check commands ran,</tspan><tspan x="702" y="266">scan for stubs and</tspan><tspan x="702" y="283">bent tests, run and</tspan><tspan x="702" y="300">capture it yourself.</tspan></text>
+
+  <!-- 6 Review -->
+  <rect class="box" x="857" y="155" width="150" height="170" rx="10" stroke="#2b3a55" stroke-width="2"/>
+  <rect x="869" y="167" width="60" height="18" rx="9" fill="#2b3a55"/><text x="899" y="180" class="chip" text-anchor="middle">CLAUDE</text>
+  <text x="995" y="181" class="num" text-anchor="end">6</text>
+  <text x="869" y="210" class="t">Aesthetic review</text>
+  <text class="d"><tspan x="869" y="232">Light → colour → shape</tspan><tspan x="869" y="249">→ density → detail.</tspan><tspan x="869" y="266">Top three gaps, each</tspan><tspan x="869" y="283">with a measurable</tspan><tspan x="869" y="300">target.</tspan></text>
+
+  <!-- 7 Accept? diamond -->
+  <polygon points="1100,170 1160,240 1100,310 1040,240" fill="#fffdf8" stroke="#2b3a55" stroke-width="2"/>
+  <text x="1100" y="236" class="t" text-anchor="middle" font-size="15">Every item</text>
+  <text x="1100" y="254" class="t" text-anchor="middle" font-size="15">+ the bar?</text>
+
+  <!-- 8 Final -->
+  <rect class="box" x="1190" y="155" width="150" height="170" rx="10"/>
+  <rect x="1202" y="167" width="60" height="18" rx="9" fill="#2b3a55"/><text x="1232" y="180" class="chip" text-anchor="middle">CLAUDE</text>
+  <text x="1328" y="181" class="num" text-anchor="end">8</text>
+  <text x="1202" y="210" class="t">Final acceptance</text>
+  <text class="d"><tspan x="1202" y="232">Clean checkout, every</tspan><tspan x="1202" y="249">item proven, honest</tspan><tspan x="1202" y="266">gap list to the user.</tspan><tspan x="1202" y="283">Nothing rounded up.</tspan></text>
+
+  <!-- forward arrows -->
+  <line x1="172" y1="240" x2="187" y2="240" stroke="#4a4a4a" stroke-width="1.6" marker-end="url(#arr)"/>
+  <line x1="339" y1="240" x2="354" y2="240" stroke="#4a4a4a" stroke-width="1.6" marker-end="url(#arr)"/>
+  <line x1="506" y1="240" x2="521" y2="240" stroke="#4a4a4a" stroke-width="1.6" marker-end="url(#arr)"/>
+  <line x1="673" y1="240" x2="688" y2="240" stroke="#4a4a4a" stroke-width="1.6" marker-end="url(#arr)"/>
+  <line x1="840" y1="240" x2="855" y2="240" stroke="#4a4a4a" stroke-width="1.6" marker-end="url(#arr)"/>
+  <line x1="1007" y1="240" x2="1038" y2="240" stroke="#4a4a4a" stroke-width="1.6" marker-end="url(#arr)"/>
+  <line x1="1160" y1="240" x2="1188" y2="240" stroke="#4a4a4a" stroke-width="1.6" marker-end="url(#arr)"/>
+  <text x="1174" y="230" class="d" text-anchor="middle" font-weight="bold">yes</text>
+
+  <!-- fix loop: diamond bottom back to Build -->
+  <path d="M1100,310 L1100,372 L598,372 L598,328" fill="none" stroke="#b8402c" stroke-width="2" marker-end="url(#arrV)"/>
+  <text x="1110" y="345" class="d" font-weight="bold" fill="#b8402c">no</text>
+  <text x="850" y="392" class="lbl" text-anchor="middle">fix brief: failures first, then the top aesthetic gaps with targets, captures attached</text>
+
+  <!-- research loop: review back to research -->
+  <path d="M932,325 L932,352 L264,352 L264,328" fill="none" stroke="#b8402c" stroke-width="1.6" stroke-dasharray="6 4" marker-end="url(#arrV)"/>
+  <text x="420" y="345" class="lbl">same gap twice: back to the sources, not more tuning</text>
+
+  <!-- GPT's half band -->
+  <rect x="22" y="420" width="1318" height="150" rx="12" fill="#f4ebdd" stroke="#e2d3bd"/>
+  <rect x="40" y="438" width="44" height="18" rx="9" fill="#c8442f"/><text x="62" y="451" class="chip" text-anchor="middle">GPT</text>
+  <text x="96" y="453" class="t" font-size="16">reads this every session: the AGENTS.md block that setup.py installs</text>
+
+  <text x="40" y="486" class="t" font-size="14">Build agreements</text>
+  <text class="d"><tspan x="40" y="507">A supervisor holds the contract · full scope at the quality bar · study the best before craft work</tspan><tspan x="40" y="525">· evidence from this turn · keep going until the milestone passes · tests describe the behaviour</tspan><tspan x="40" y="543">· learn methods, make original work</tspan></text>
+
+  <text x="720" y="486" class="t" font-size="14">fishtrap principles</text>
+  <text class="d"><tspan x="720" y="507">Work out who judges the result and hold every rule against that outcome</tspan><tspan x="720" y="525">· apply each rule as far as its reason reaches · carry the task through, ask</tspan><tspan x="720" y="543">only for what only the user can give · report plainly, qualify only the uncertain</tspan></text>
+  <line x1="700" y1="476" x2="700" y2="552" stroke="#e0cfb5" stroke-width="1.2"/>
+</svg>
